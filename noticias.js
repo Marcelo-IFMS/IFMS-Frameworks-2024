@@ -1,3 +1,1 @@
-console.log("Olá Mundo");
-console.log('GIT');
-console.log("editado online");
+console.log("Aula De Githut para o Moodle IFMS!");
