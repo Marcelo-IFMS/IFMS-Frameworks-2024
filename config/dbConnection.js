@@ -1,11 +1,15 @@
 var mysql = require("mysql");
 
-
-module.exports = function () {
+var connMysql = function () {
+    console.log("Conexão estabelecida");
     return mysql.createConnection({
         host: 'localhost',
         user: 'ifms',
         password: 'ifms',
         database: 'portal_noticias'
     });
+}
+module.exports = function () {
+    console.log('autoload DB ok!');
+    return connMysql;
 }
