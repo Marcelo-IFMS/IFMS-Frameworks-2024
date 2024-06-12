@@ -9,9 +9,12 @@ app.set("views", "./app/views");
 app.use(express.static("./app/public"));
 
 consign()
-.include('app/routes')
-.then('config/dbConnection.js')
-.into(app);
+    .include('app/routes')
+    .then('config/dbConnection.js')
+    .into(app);
+
+app.use(function (req, res) {
+    res.status(200).render("secao/404");
+});
 
 module.exports = app;
- 
