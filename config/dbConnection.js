@@ -4,7 +4,7 @@ var connMysql = function () {
     console.log("Conexão estabelecida");
     return mysql.createConnection({
         host: 'localhost',
-        user: 'root',
+        user: 'ifms',
         password: 'ifms',
         database: 'portal_noticias'
     });
