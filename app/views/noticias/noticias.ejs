@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <title>Portal de notícias</title>
-    </head>
-    <body>
-      <h1>Notícias</h1>
-      <table>
-        <tr>
-            <td>ID</td>
-            <td>Título</td>
-            <td>Contéudo</td>
-            <td>Data e Hora da Criação</td>
-        </tr>
-        <% for (var i =0 ;i<noticias.length;i++) {%>
-            <tr>
-                <td><%=noticias[i].idnoticia%></td>
-                <td><%=noticias[i].titulo%></td>
-                <td><%=noticias[i].noticia%></td>
-                <td><%=noticias[i].dhnoticia%></td>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Portal de notícias</title>
+
+</head>
+
+<body>
+    <div class=" p-3 mt-2 container bg-primary-subtle rounded border border-info mx-auto m-2 ">
+        <p class="text-center">Bem vindo as Notícias</p>
+    </div>
+    <div class=" p-3 mt-2 container bg-primary-subtle rounded border border-info mx-auto m-2 ">
+        <p class="text-center"> Bem vindo as Notícias</p>
+
+
+        <table class="table table-info table-striped table-bordered border-primary">
+            <tr class="text-center">
+                <td>ID</td>
+                <td>Título</td>
+                <td>Contéudo</td>
+                <td>Data e Hora da Criação</td>
             </tr>
-        <% }%>
-      </table>
-    </body>
+            <% for (var i=0 ;i<noticias.length;i++) {%>
+                <tr>
+                    <td class="text-center">
+                        <%=noticias[i].idnoticia%>
+                    </td>
+                    <td>
+                        <%=noticias[i].titulo%>
+                    </td>
+                    <td>
+                        <%=noticias[i].noticia%>
+                    </td>
+                    <td>
+                        <%=noticias[i].dhnoticia.toUTCString()%>
+                    </td>
+                </tr>
+                <% }%>
+        </table>
+    </div>
+
+
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
