@@ -17,29 +17,33 @@
         <p class="text-center"> Bem vindo as Notícias</p>
 
 
-        <table class="table table-info table-striped table-bordered border-primary">
-            <tr class="text-center">
-                <td>ID</td>
-                <td>Título</td>
-                <td>Contéudo</td>
-                <td>Data e Hora da Criação</td>
-            </tr>
-            <% for (var i=0 ;i<noticias.length;i++) {%>
-                <tr>
-                    <td class="text-center">
-                        <%=noticias[i].idnoticia%>
-                    </td>
-                    <td>
-                        <%=noticias[i].titulo%>
-                    </td>
-                    <td>
-                        <%=noticias[i].noticia%>
-                    </td>
-                    <td>
-                        <%=noticias[i].dhnoticia.toUTCString()%>
-                    </td>
+        <table class="table table-sm table-hover table-info table-striped table-bordered border-primary">
+            <thead class="thead-primary">
+                <tr class="text-center">
+                    <th scope="col">ID</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Contéudo</th>
+                    <th scope="col">Data e Hora da Criação</th>
                 </tr>
-                <% }%>
+            </thead>
+            <tbody>
+                <% for (var i=0 ;i<noticias.length;i++) {%>
+                    <tr>
+                        <th scope="row" class="text-center">
+                            <%=noticias[i].id_noticia%>
+                        </th>
+                        <td>
+                            <%=noticias[i].titulo%>
+                        </td>
+                        <td>
+                            <%=noticias[i].noticia%>
+                        </td>
+                        <td>
+                            <%=noticias[i].data_criacao.toUTCString()%>
+                        </td>
+                    </tr>
+                    <% }%>
+            </tbody>
         </table>
     </div>
 

@@ -17,7 +17,8 @@
 
     <div class=" p-3 mt-2 container bg-primary-subtle rounded border border-info mx-auto m-2 ">
         Bem vindo ao gerenciador de inclusão de notícias
-        <form action="noticias" method="post">
+        <%  if (!locals.cadok){%>
+        <form action="formulario_inclusao_noticias" method="post">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Título Notícia</label>
                 <input type="text" class="form-control" name="titulo" id="exampleFormControlInput1">
@@ -31,6 +32,9 @@
                 <input class="btn btn-primary" type="submit" value="cadastrar"></input>
             </div>
         </form>
+        <%}else{%>
+            <p>Cadastro realizado</p>
+       <% }%>
     </div>
     <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
 </body>
