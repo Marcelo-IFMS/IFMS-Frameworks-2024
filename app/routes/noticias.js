@@ -13,4 +13,9 @@ module.exports = function (app) {
         res.send("ola");
        
     })   
+    app.post('/noticias', function (req, res) {
+        console.log(req.body);
+        res.send("ola");
+       
+    })   
 }
