@@ -13,5 +13,13 @@ module.exports = function (app) {
         res.send("ola");
 
     })
+    app.post("/noticias/:Identificacao/:NomeCompleto", function (req, res) {
+        // var conexao = app.config.dbConnection();
+        var queryNoticias 
+        = "INSERT INTO noticias (titulo,noticia) VALUES ('"
+        +req.params.Identificacao+"','"+req.params.NomeCompleto+"')"; 
+        console.log(queryNoticias);
+        res.send("olá");
+    })
 
 }
