@@ -16,11 +16,11 @@ module.exports = function (app) {
     app.post("/noticias/:titulo/:noticia", function (req, res) {
         var conexao = app.config.dbConnection();
         var queryNoticias 
-        = "INSERT INTO noticias (titulo,noticia) VALUES ('"
-        +req.params.titulo+"','"+req.params.noticia+"')"; 
-        console.log(queryNoticias);
+        = 'INSERT INTO noticias (tit ulo,noticia) VALUES ("'
+        +req.params.titulo+'","'+req.params.noticia+'")'; 
         conexao.query(queryNoticias,function (error, result) {
-            res.send("Gravou no Banco?");
+            console.log(error);
+            res.send(error.errno+" | "+error.sql+" | "+error.sqlMessage);
         })
     })
 }

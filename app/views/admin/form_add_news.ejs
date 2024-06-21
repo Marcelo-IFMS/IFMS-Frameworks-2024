@@ -17,27 +17,27 @@
 
     <div class=" p-3 mt-2 container bg-primary-subtle rounded border border-info mx-auto m-2 ">
         Bem vindo ao gerenciador de inclusão de notícias
-        <%  if (!locals.cadok){%>
-        <form action="formulario_inclusao_noticias" method="post">
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Título Notícia</label>
-                <input type="text" class="form-control" name="titulo" id="exampleFormControlInput1">
-            </div>
+        <% if (!locals.cadok){%>
+            <form action="formulario_inclusao_noticias" method="post">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Título Notícia</label>
+                    <input type="text" class="form-control" name="titulo" id="exampleFormControlInput1">
+                </div>
 
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Informe a notícia</label>
-                <textarea class="form-control" name="noticia" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div class="form-group my-2">
-                <input class="btn btn-primary" type="submit" value="cadastrar"></input>
-            </div>
-        </form>
-        <%}else{%>
-            <p>Cadastro realizado</p>
-       <% }%>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Informe a notícia</label>
+                    <textarea class="form-control" name="noticia" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="form-group my-2">
+                    <input class="btn btn-primary" type="submit" value="cadastrar"></input>
+                </div>
+            </form>
+            <%}else{%>
+                <p>Cadastro realizado</p>
+                <% }%>
     </div>
     <div id="rodape">
-        <img src="img/rodape.png"/> 
+        <img src="img/rodape.png" />
     </div>
     <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
 </body>
