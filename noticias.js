@@ -13,5 +13,5 @@ var server = http.createServer(function (req, res) {
     } //novo comentáriop
 });
 
-server.listen(3000);
-console.log('Escutando a porta 3000');
+server.listen(6000);
+console.log('Escutando a porta 6000');
