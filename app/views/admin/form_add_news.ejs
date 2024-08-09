@@ -2,6 +2,48 @@
 <html lang="en">
 
 <head>
+    <%- include ("../elementos/head") %>
+</head>
+
+<body>
+    <div class="container bg-primary-subtle rounded border border-info mx-auto m-2">
+        <%- include ("../elementos/menu") %>
+    </div>
+
+    <div class=" p-3 mt-2 container bg-primary-subtle rounded border border-info mx-auto m-2 ">
+        Bem vindo ao Formulário
+        <% if (!locals.cadOk){ %>
+            <form action="formulario_inclusao_noticias" method="post">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Informe o Título da Notícia</label>
+                    <input type="text" class="form-control" name="titulo" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Informe a Notícia</label>
+                    <textarea class="form-control" name="noticia" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="col-auto">
+                    <input type="submit" class="btn btn-primary mb-3" value="Cadastrar">
+                </div>
+            </form>
+            <% }else{ %>
+                <p>cadastro realizado</p>
+            <% }%>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
     <%- include ("../elementos/head") %>    
 </head>
 
@@ -37,4 +79,4 @@
     <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
-</html>
+</html> -->
